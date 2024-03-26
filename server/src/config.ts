@@ -22,7 +22,8 @@ const configSchema = z.object({
   SESSION_TOKEN_SECRET: z.string(),
   SESSION_TOKEN_EXPIRES_IN: z.string(),
   DOMAIN: z.string(),
-  UPLOAD_FOLDER: z.string()
+  UPLOAD_FOLDER: z.string(),
+  COOKIE_MODE: z.enum(['true', 'false']).transform((val) => val === 'true')
 })
 
 const configServer = configSchema.safeParse(process.env)
