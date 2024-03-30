@@ -47,9 +47,9 @@ export const LoginRes = RegisterRes
 
 export type LoginResType = z.TypeOf<typeof LoginRes>
 
-export const RefreshSessionBody = z.object({}).strict()
+export const SlideSessionBody = z.object({}).strict()
 
-export type RefreshSessionBodyType = z.TypeOf<typeof RefreshSessionBody>
-export const RefreshSessionRes = RegisterRes
+export type SlideSessionBodyType = z.TypeOf<typeof SlideSessionBody>
+export const SlideSessionRes = RegisterRes
 
-export type RefreshSessionResType = z.TypeOf<typeof RefreshSessionRes>
+export type SlideSessionResType = z.TypeOf<typeof SlideSessionRes>
