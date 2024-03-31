@@ -1,11 +1,11 @@
-import { decodeJWT } from "@/lib/utils";
+// import { decodeJWT } from "@/lib/utils";
 
-type PayloadJWT = {
-  iat: number;
-  exp: number;
-  tokenType: string;
-  userId: number;
-};
+// type PayloadJWT = {
+//   iat: number;
+//   exp: number;
+//   tokenType: string;
+//   userId: number;
+// };
 
 export async function POST(request: Request) {
   const body = await request.json();
@@ -19,7 +19,7 @@ export async function POST(request: Request) {
       }
     );
   }
-  const payload = decodeJWT<PayloadJWT>(sessionToken);
+  // const payload = decodeJWT<PayloadJWT>(sessionToken);
   const expiresDate = new Date(expiresAt).toUTCString();
   return Response.json(body, {
     status: 200,
