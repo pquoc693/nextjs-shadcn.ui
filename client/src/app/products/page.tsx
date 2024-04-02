@@ -1,4 +1,5 @@
 import productApiRequest from "@/apiRequests/product";
+import DeleteProduct from "@/app/products/_components/delete-product";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
@@ -28,7 +29,7 @@ export default async function ProductListPage() {
               <Link href={`/products/${product.id}`}>
                 <Button variant={"outline"}>Edit</Button>
               </Link>
-              <Button variant={"destructive"}>Delete</Button>
+              <DeleteProduct product={product} />
             </div>
           </div>
         ))}
