@@ -4,6 +4,12 @@ import { Button } from "@/components/ui/button";
 import { cookies } from "next/headers";
 import Image from "next/image";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Danh sách sản phẩm",
+  description: "Danh sách sản phẩm của Productic, được tạo bởi dev"
+};
 
 export default async function ProductListPage() {
   const cookieStore = cookies();
